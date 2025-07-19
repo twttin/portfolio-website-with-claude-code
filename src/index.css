@@ -1,0 +1,177 @@
+/* CSS Custom Properties for Design System */
+:root {
+  /* Font Family */
+  --font-family-primary: 'Jost', sans-serif;
+  --font-family-mono: 'Jost', monospace;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-md: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Spacing System */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  
+  /* Color System - Light Theme (Default) */
+  --color-primary: #4DA1A9;
+  --color-primary-light: #EBFDFF;
+  --color-accent: #FFA630;
+  --color-accent-light: #FFF6EB;
+  --color-dark: #373A3C;
+  --color-dark-alt: #AFB9BF;
+  --color-light: #F2F2F2;
+  
+  /* Semantic Color Tokens - Light Theme */
+  --color-background: #F2F2F2;
+  --color-surface: #E8E8E8;
+  --color-surface-elevated: #FFFFFF;
+  --color-text-primary: #2C2F31;
+  --color-text-secondary: #4A5055;
+  --color-text-accent: #3A8A92;
+  --color-border: rgba(209, 213, 219, 0.5);
+  --color-border-hover: #4DA1A9;
+  --color-link: #4DA1A9;
+  --color-link-hover: #FFA630;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  /* Override semantic tokens for dark mode */
+  --color-background: #373A3C;
+  --color-surface: #2A2D2F;
+  --color-surface-elevated: #373A3C;
+  --color-text-primary: #F2F2F2;
+  --color-text-secondary: #C5CDD2;
+  --color-text-accent: #EBFDFF;
+  --color-border: rgba(175, 185, 191, 0.2);
+  --color-border-hover: #4DA1A9;
+  --color-link: #EBFDFF;
+  --color-link-hover: #FFF6EB;
+}
+
+
+body {
+  margin: 0;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Scale Classes */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-md { font-size: var(--font-size-md); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+.text-5xl { font-size: var(--font-size-5xl); }
+
+/* Font Weight Classes */
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+
+/* Line Height Classes */
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-normal { line-height: var(--line-height-normal); }
+.leading-relaxed { line-height: var(--line-height-relaxed); }
+
+/* Heading Styles */
+h1, .h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin: 0 0 1rem 0;
+}
+
+h2, .h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin: 0 0 0.875rem 0;
+}
+
+h3, .h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin: 0 0 0.75rem 0;
+}
+
+h4, .h4 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  margin: 0 0 0.625rem 0;
+}
+
+h5, .h5 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  margin: 0 0 0.5rem 0;
+}
+
+h6, .h6 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  margin: 0 0 0.5rem 0;
+}
+
+/* Body Text Variants */
+.body-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.body-md {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+}
+
+.body-lg {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Code and Monospace */
+code, pre {
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-normal);
+}
+
+code {
+  font-size: 0.875em;
+}
